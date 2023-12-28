@@ -12,27 +12,22 @@ import Landing from './Components/Landing'
 import Social from './Components/Social'
 import Products from './Components/Products'
 import Contact from './Components/Contact'
+import Blog from './Components/Blog'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-     {/* <Hero/>
-     <CollectionCards/>
-     <Trending/> */}
-     {/* <Carts/> */}
-     {/* <OverviewCard/> */}
      <BrowserRouter>
 
             <Routes>
-
               <Route path="/" element={<Landing />} />
               <Route path="/cart/:id" element={<Carts />} />
-              {/* <Route path="/data" element={<OverviewCard />} /> */}
               <Route path="/data/:id" element={<OverviewCard/>} />
               <Route path="/product" element={<Products />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Blog />} />
             </Routes>
 
  </BrowserRouter>

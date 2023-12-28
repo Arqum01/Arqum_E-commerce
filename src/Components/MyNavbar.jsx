@@ -6,12 +6,11 @@ const MyNavbar = () => {
 
     const [state, setState] = useState(false)
 
-    // Replace javascript:void(0) paths with your paths
     const navigation = [
         { title: "Home", path: "/" },
         { title: "Products", path: "/product" },
         { title: "Contact", path: "/contact" },
-        { title: "Blog", path: "/" }
+        { title: "Blog", path: "/blog" }
     ]
 
     return (
@@ -46,16 +45,6 @@ const MyNavbar = () => {
                 </div>
                 <div className={`flex-1 pb-3 mt-8 md:block md:pb-0 md:mt-0 ${state ? 'block' : 'hidden'}`}>
                     <ul className="justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
-                        
-                            {/*  navigation.map((item, idx) => { */}
-                                {/*  return (
-                                     <li key={idx} className="text-xl text-black hover:text-indigo-600">
-                                         <Link href={item.path} className="block">
-                                             {item.title}
-                                         </Link>
-                                     </li>
-                                 ) */}
-                            {/*  }) */}
                             <li className="text-xl text-black hover:text-indigo-600">
                             <Link to={"/"} className="block">
                                 Home
@@ -72,13 +61,12 @@ const MyNavbar = () => {
                             </Link>
                         </li>
                         <li className="text-xl text-black hover:text-indigo-600">
-                            <Link to={"/"} className="block">
+                            <Link to={"/blog"} className="block">
                                 Blog
                             </Link>
                         </li>
-                        {/* } */}
                         <span className='hidden w-px h-8 bg-black md:block'></span>
-                        <div className='space-y-3 items-center gap-x-6 md:flex md:space-y-0'>
+                        <div className='space-y-3 sm:flex sm:justify-center gap-x-6 md:flex md:space-y-0'>
                             <li>
                                 <Link to="/cart" className="text-2xl block py-3 text-center text-black hover:text-indigo-600 border rounded-lg md:border-none">
                                 <MdOutlineShoppingCart/>
