@@ -2,37 +2,42 @@ import { useState, useEffect } from "react";
 
 const Testimonials = () => {
   const testimonials = [
-        {
-            avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
-            name: "Martin escobar",
-            title: "Founder of meta",
-            quote: "I can't believe the incredible deals I found on this Store! The products exceeded my expectations, and the customer service was outstanding. Definitely my new go-to for online shopping!"
-        },
-        {
-            avatar: "https://randomuser.me/api/portraits/women/79.jpg",
-            name: "Angela stian",
-            title: "Product designer",
-            quote: "I stumbled upon this Brand and decided to give it a try. What a pleasant surprise! The products are top-notch, and the shipping was lightning fast. I've already recommended it to all my friends!"
-        },
-        {
-            avatar: "https://randomuser.me/api/portraits/men/86.jpg",
-            name: "Karim ahmed",
-            title: "DevOp engineer",
-            quote: "Shopping on this Brand was a game-changer for me. The variety of items is unmatched, and the prices are unbeatable. My order arrived well-packaged and in perfect condition. 5 stars!"
-        },
-        {
-            avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
-            name: "Ashfaq ahmed",
-            title: "Founder of meta",
-            quote: "I've been a loyal customer of this Brand for months now, and I can't get enough. The quality of their products is consistently excellent, and the website is so easy to navigate. A fantastic online shopping experience!"
-        },
-        {
-            avatar: "https://randomuser.me/api/portraits/women/79.jpg",
-            name: "Shamaila",
-            title: "Product designer",
-            quote: "I'm so impressed with the professionalism of this Brand. The customer support team went above and beyond to assist me with my inquiries. The products I ordered were fantastic, and the overall shopping process was a breeze. Highly recommend!"
-        },
-    ]
+    {
+      avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
+      name: "Martin escobar",
+      title: "Founder of meta",
+      quote:
+        "I can't believe the incredible deals I found on this Store! The products exceeded my expectations, and the customer service was outstanding. Definitely my new go-to for online shopping!",
+    },
+    {
+      avatar: "https://randomuser.me/api/portraits/women/79.jpg",
+      name: "Angela stian",
+      title: "Product designer",
+      quote:
+        "I stumbled upon this Brand and decided to give it a try. What a pleasant surprise! The products are top-notch, and the shipping was lightning fast. I've already recommended it to all my friends!",
+    },
+    {
+      avatar: "https://randomuser.me/api/portraits/men/86.jpg",
+      name: "Karim ahmed",
+      title: "DevOp engineer",
+      quote:
+        "Shopping on this Brand was a game-changer for me. The variety of items is unmatched, and the prices are unbeatable. My order arrived well-packaged and in perfect condition. 5 stars!",
+    },
+    {
+      avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
+      name: "Ashfaq ahmed",
+      title: "Founder of meta",
+      quote:
+        "I've been a loyal customer of this Brand for months now, and I can't get enough. The quality of their products is consistently excellent, and the website is so easy to navigate. A fantastic online shopping experience!",
+    },
+    {
+      avatar: "https://randomuser.me/api/portraits/women/79.jpg",
+      name: "Shamaila",
+      title: "Product designer",
+      quote:
+        "I'm so impressed with the professionalism of this Brand. The customer support team went above and beyond to assist me with my inquiries. The products I ordered were fantastic, and the overall shopping process was a breeze. Highly recommend!",
+    },
+  ];
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
@@ -53,10 +58,10 @@ const Testimonials = () => {
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h3 className="text-3xl text-gray-900 font-bold pb-6">
-           Happy Customers
+            Happy Customers
           </h3>
           <ul>
-            {testimonials.map((item, idx) => (
+            {testimonials.map((item, idx) =>
               currentTestimonial === idx ? (
                 <li key={idx}>
                   <figure>
@@ -82,7 +87,7 @@ const Testimonials = () => {
                   </figure>
                 </li>
               ) : null
-            ))}
+            )}
           </ul>
         </div>
         <div className="mt-6">

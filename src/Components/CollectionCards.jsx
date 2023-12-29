@@ -1,10 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import data from "./ProductData"
+import data from "./ProductData";
 
 const CollectionCards = () => {
-
   // // Display only the first 8 cards
   const first8Cards = data.slice(0, 6);
 
@@ -13,7 +12,9 @@ const CollectionCards = () => {
       <section>
         <div className="mx-auto max-w-screen-2xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
           <header className="text-center">
-          <p className="underline underline-offset-4 text-black">Best Products</p>
+            <p className="underline underline-offset-4 text-black">
+              Best Products
+            </p>
             <h1 className="text-5xl font-extrabold mb-5 text-black">
               Best Selling Products
             </h1>

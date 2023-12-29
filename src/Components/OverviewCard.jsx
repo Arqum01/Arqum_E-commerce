@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 import { FaRegStar } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
-import { Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
-import data from './ProductData';
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import data from "./ProductData";
 
 const OverviewCard = () => {
   const { id } = useParams();
-  const selectedItem = data.find(item => item.id === parseInt(id, 10));
+  const selectedItem = data.find((item) => item.id === parseInt(id, 10));
   if (!selectedItem) {
     return <p>Item not found</p>;
   }
@@ -22,19 +22,21 @@ const OverviewCard = () => {
             src={images}
           />
           <div className="mt-6 w-full lg:mt-0 lg:w-1/2 lg:pl-10">
-            <h2 className="text-sm font-semibold tracking-widest text-gray-500">Our Fashion Material</h2>
+            <h2 className="text-sm font-semibold tracking-widest text-gray-500">
+              Our Fashion Material
+            </h2>
             <h1 className="my-4 text-3xl font-semibold text-black">{title}</h1>
             <div className="my-4 flex items-center">
               <span className="flex items-center space-x-1">
                 {[...Array(5)].map((_, i) => (
                   <FaRegStar key={i} size={16} className="text-yellow-500" />
                 ))}
-                <span className="ml-3 inline-block text-xs font-semibold">4 Reviews</span>
+                <span className="ml-3 inline-block text-xs font-semibold">
+                  4 Reviews
+                </span>
               </span>
             </div>
-            <p className="leading-relaxed">
-             {description}
-            </p>
+            <p className="leading-relaxed">{description}</p>
             <div className="mb-5 mt-6 flex items-center border-b-2 border-gray-100 pb-5">
               <div className="flex items-center">
                 <span className="mr-3 text-sm font-semibold">Color</span>
@@ -57,21 +59,23 @@ const OverviewCard = () => {
               </div>
             </div>
             <div className="flex items-center justify-between">
-              <span className="title-font text-xl font-bold text-gray-900">{price}</span>
-              <Link to= {`/cart/${id}`} >
-              <button
-                type="button"
-                className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-              >
-                Add to Cart
-              </button>
+              <span className="title-font text-xl font-bold text-gray-900">
+                {price}
+              </span>
+              <Link to={`/cart/${id}`}>
+                <button
+                  type="button"
+                  className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                >
+                  Add to Cart
+                </button>
               </Link>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default OverviewCard
+export default OverviewCard;
