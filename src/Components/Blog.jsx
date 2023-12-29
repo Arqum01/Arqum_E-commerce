@@ -6,9 +6,9 @@ const Blog = () => {
   return (
     <>
     <MyNavbar/>
-    <header className="lg:mx-80 my-10 ">
-            <h1 className="underline text-5xl font-extrabold mb-5 text-black">
-              Our Blogs
+    <header className=" my-10 ">
+            <h1 className="underline text-center text-5xl font-extrabold mb-5 text-gray-700">
+              BLOGS
             </h1>
           </header>
       <section>

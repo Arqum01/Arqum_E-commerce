@@ -23,13 +23,13 @@ const Testimonials = () => {
         {
             avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
             name: "Ashfaq ahmed",
-            title: "DevOp engineer",
+            title: "Founder of meta",
             quote: "I've been a loyal customer of this Brand for months now, and I can't get enough. The quality of their products is consistently excellent, and the website is so easy to navigate. A fantastic online shopping experience!"
         },
         {
             avatar: "https://randomuser.me/api/portraits/women/79.jpg",
-            name: "Ali Ahmed",
-            title: "DevOp engineer",
+            name: "Shamaila",
+            title: "Product designer",
             quote: "I'm so impressed with the professionalism of this Brand. The customer support team went above and beyond to assist me with my inquiries. The products I ordered were fantastic, and the overall shopping process was a breeze. Highly recommend!"
         },
     ]
@@ -53,7 +53,7 @@ const Testimonials = () => {
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h3 className="text-3xl text-gray-900 font-bold pb-6">
-            Our Happy Customers
+           Happy Customers
           </h3>
           <ul>
             {testimonials.map((item, idx) => (
