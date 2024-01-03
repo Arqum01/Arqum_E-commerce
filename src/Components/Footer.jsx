@@ -24,7 +24,7 @@ const Footer = () => {
             </p>
 
             <Link
-              to="#"
+              to="/"
               className="mt-8 inline-block rounded-full border border-black px-12 py-3 text-sm font-medium text-black hover:bg-black hover:text-white focus:outline-none focus:ring active:bg-black"
             >
               Get Started

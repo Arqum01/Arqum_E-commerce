@@ -47,7 +47,7 @@ const Social = () => {
         <div className="flex justify-center h-100">
           <Link
             className="inline-block rounded border border-current px-8 py-3 text-sm font-medium text-black transition hover:rotate-2 hover:scale-110 focus:outline-none focus:ring active:text-black mt-2 mb-10"
-            to="/download"
+            to="/"
           >
             @Willson / Store
           </Link>
