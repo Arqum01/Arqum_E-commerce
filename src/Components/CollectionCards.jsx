@@ -1,11 +1,15 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import data from "./ProductData";
+// import data from "./ProductData";
+import { useSelector } from "react-redux";
 
 const CollectionCards = () => {
+
+  const items = useSelector((state) => state.cart.items)
+
   // // Display only the first 8 cards
-  const first8Cards = data.slice(0, 6);
+  const first6Cards = items.slice(0, 6);
 
   return (
     <>
@@ -21,7 +25,7 @@ const CollectionCards = () => {
           </header>
 
           <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
-            {first8Cards.map((item) => (
+            {first6Cards.map((item) => (
               <li key={item.id}>
                 <Link
                   to={`/data/${item.id}`}

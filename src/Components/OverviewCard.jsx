@@ -3,11 +3,12 @@ import { FaRegStar } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import data from "./ProductData";
+import { useSelector } from "react-redux";
 
 const OverviewCard = () => {
   const { id } = useParams();
-  const selectedItem = data.find((item) => item.id === parseInt(id, 10));
+  const items = useSelector((state) => state.cart.items)
+  const selectedItem = items.find((item) => item.id === parseInt(id, 10));
   if (!selectedItem) {
     return <p>Item not found</p>;
   }

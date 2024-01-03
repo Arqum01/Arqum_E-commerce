@@ -11,7 +11,7 @@ const Contact = () => {
   return (
     <>
       <MyNavbar />
-      <section className="bg-white dark:bg-gray-900 pt-5 pb-40">
+      <section className="bg-white pt-5 pb-16">
         <div className="container px-6 py-12 mx-auto">
           <div>
             <h1 className=" text-blue-500 dark:text-blue-400 text-4xl font-bold">

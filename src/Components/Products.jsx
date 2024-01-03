@@ -1,11 +1,13 @@
 import React from "react";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
-import data from "./ProductData";
 import MyNavbar from "./MyNavbar";
+import { useSelector } from "react-redux";
 
 const Products = () => {
+
+  const items = useSelector((state) => state.cart.items)
+
   return (
     <>
       {/* <Navbar/> */}
@@ -23,7 +25,7 @@ const Products = () => {
           </header>
 
           <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {data.map((item) => (
+            {items.map((item) => (
               <li key={item.id}>
                 <Link
                   to={`/data/${item.id}`}
